@@ -9,11 +9,11 @@
       <th>Min players</th>
       <th>Max players</th>
       <th>Difficulty</th>
-      <th>Length</th>
+      <th>Avg. Length (Min)</th>
       <th>Description</th>
       <th>Genre</th>
       <th>Mechanics</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -24,11 +24,12 @@
         <td><%= game.min_players %></td>
         <td><%= game.max_players %></td>
         <td><%= game.difficulty %></td>
-        <td><%= game.length %></td>
+        <td><%= game.avg_length_min %></td>
         <td><%= game.description %></td>
         <td><%= game.genre %></td>
         <td><%= game.mechanics %></td>
         <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'JSON', game_path(game, :format => :json) %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

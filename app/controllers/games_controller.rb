@@ -69,6 +69,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:title, :min_players, :max_players, :difficulty, :length, :description, :genre, :mechanics)
+      params.require(:game).permit(:title, :min_players, :max_players, :difficulty, :avg_length_min, :description, :genre, :mechanics)
     end
 end
