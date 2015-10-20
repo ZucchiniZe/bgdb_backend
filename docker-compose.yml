@@ -1,0 +1,13 @@
+web:
+  build: .
+  ports:
+    - "3000:3000"
+  volumes:
+    - .:/usr/src/app
+  command: bundle exec passenger start
+  links:
+    - postgres
+postgres:
+  image: postgres:9.4
+  ports:
+    - "5432"
