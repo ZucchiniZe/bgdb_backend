@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem "passenger"
+ruby '2.2.1'
+
+gem 'passenger'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -46,3 +48,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
+end
